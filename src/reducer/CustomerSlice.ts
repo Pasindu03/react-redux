@@ -12,9 +12,12 @@ const CustomerSlice = createSlice(
             printName:(state, action) => {
                 state.name = action.payload
             },
+            addName:(state,action) => {
+                state.push(action.payload)
+            },
         }
     }
 )
 
-export const {printName} = CustomerSlice.actions;
+export const {printName, addName} = CustomerSlice.actions;
 export default CustomerSlice.reducer;
