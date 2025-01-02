@@ -4,7 +4,7 @@ import {useState} from "react";
 import {printName} from "./reducer/CustomerSlice.ts";
 
 function App() {
-    const customer = useSelector(state => state.customer.count)
+    const customer = useSelector(state => state.customer.name)
 
     const dispatch = useDispatch();
 
@@ -12,15 +12,17 @@ function App() {
 
     return (
         <>
-            <input type={"text"} placeholder={"Name : "} onChange={(e) => setName(e.target.value)}></input>
+            <input type={"text"} placeholder={"Name : "} onChange={(e) => setName(e.target.value)} value={name}></input>
+
+            <br/>
+            <br/>
+
             <button onClick={() => dispatch(printName(name))}>Print Name</button>
 
             <br/>
             <br/>
 
-            <h2>
-                {customer}
-            </h2>
+            {customer}
         </>
     )
 }
