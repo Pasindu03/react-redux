@@ -9,8 +9,8 @@ const CustomerSlice = createSlice(
         name: 'customer',
         initialState: initialState,
         reducers:{
-            printName:(state, {payload}) => {
-                state.name = payload
+            printName:(state, action) => {
+                state.name = action.payload
             },
         }
     }
