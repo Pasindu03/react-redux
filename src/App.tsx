@@ -3,9 +3,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 
 function App() {
-    /*const count = useSelector(state=>state.countReducer.count)
-    const visible = useSelector(state => state.countReducer.visible)*/
-
     const customer = useSelector(state => state.customerReducer)
     const item = useSelector(state => state.itemReducer)
 
@@ -25,12 +22,6 @@ function App() {
             {customer}
             <br/>
             {item}
-
-            {/*{visible && count}
-            <br/>
-            <button onClick={()=>dispatch({type:"INCREMENT"})}>Increment</button>
-            <button onClick={()=>dispatch({type:"DECREMENT"})}>Decrement</button>
-            <button onClick={()=>dispatch({type:"TOGGLE"})}>Toggle</button>*/}
         </>
     )
 }
